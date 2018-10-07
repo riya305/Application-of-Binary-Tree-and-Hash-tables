@@ -69,8 +69,7 @@ void FindCategoryAppRangeInorder(struct tree* root, string catName, char* startA
     { 
     	flag=2;
         FindCategoryAppRangeInorder(root->left,catName,startAlpha,endAlpha,flag);
-        char firstLetter= root->applicationInfo.app_name[0];
-        if((firstLetter >= startAlpha[0]) && (firstLetter <= endAlpha[0])){
+        if((strcmp(root->applicationInfo.app_name,startAlpha)>=0) && (strcmp(endAlpha,root->applicationInfo.app_name)>=0)){
         	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
         	cout << "\n";
         	flag=1;
