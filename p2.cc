@@ -34,23 +34,71 @@ struct hash_table_entry{
    struct tree *app_node; // Pointer to node in tree containing the application information
 };
 
+void FindCategoryInorder(struct tree* root, string catName){
+	if (root != NULL) 
+    { 
+        FindCategoryInorder(root->left,catName); 
+        	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
+        	cout << "\n";
+        FindCategoryInorder(root->right,catName); 
+    }
+   
+}
+
+void FindCategoryPriceRangeInorder(struct tree* root, string catName, float startPrice, float endPrice, int flag){
+	if (root != NULL) 
+    { 
+    	flag=2;
+        FindCategoryPriceRangeInorder(root->left,catName,startPrice,endPrice,flag);
+        if((root->applicationInfo.price >= startPrice) && (root->applicationInfo.price <= endPrice)){
+        	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
+        	cout << "\n";
+        	flag=1;
+    	}
+        FindCategoryPriceRangeInorder(root->right,catName,startPrice,endPrice,flag); 
+    }
+    else if(flag!=1 && flag!=2 && root==NULL){
+    	cout << "Category:   "+catName+"	"+"No applications found for given range.";
+		cout << "\n";
+    }
+   
+}
+
+void FindCategoryAppRangeInorder(struct tree* root, string catName, char* startAlpha, char* endAlpha, int flag){
+	if (root != NULL) 
+    { 
+    	flag=2;
+        FindCategoryAppRangeInorder(root->left,catName,startAlpha,endAlpha,flag);
+        char firstLetter= root->applicationInfo.app_name[0];
+        if((firstLetter >= startAlpha[0]) && (firstLetter <= endAlpha[0])){
+        	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
+        	cout << "\n";
+        	flag=1;
+    	}
+        FindCategoryAppRangeInorder(root->right,catName,startAlpha,endAlpha,flag); 
+    }
+    else if(flag!=1 && flag!=2 && root==NULL){
+    	cout << "Category:   "+catName+"	"+"No applications found for given range.";
+		cout << "\n";
+    }
+   
+}
+
 void FindFreePriceInorder(struct tree* root, string catName, int flag) 
 { 
     if (root != NULL) 
     { 
+    	flag=2;
         FindFreePriceInorder(root->left,catName, flag); 
         if((root->applicationInfo.price<=0)){
         	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
         	cout << "\n";
         	flag=1;
         }
-        else{
-        	flag=2;
-        }
         
         FindFreePriceInorder(root->right,catName,flag); 
     }
-    else if(flag==0 && root==NULL){
+    else if(flag!=1 && flag!=2 && root==NULL){
     	cout << "Category:   "+catName+"	"+"No free applications found";
 		cout << "\n";
     }
@@ -150,7 +198,40 @@ int main()
 				}
 
 			}
+			else if(strcmp(commandSplited[1],"category")==0){
+				int flag=0;
+				for(int j=0; j< noOfCategories;j++){
+					if(strcmp(categoryArr[j].category,commandSplited[2])==0){
+						FindCategoryInorder(categoryArr[j].root, categoryArr[j].category);
+						flag=1;
+					}
+					else if(flag==0 && j==noOfCategories-1){
+						cout << "No category found \n";
+					}
+				}
 
+			}
+			cout << "********************END***************************\n";
+
+		}
+		else if(strcmp(commandSplited[0],"range")==0){
+			if(strcmp(commandSplited[2],"app")==0){
+				for(int j=0; j< noOfCategories;j++){
+					if(strcmp(categoryArr[j].category,commandSplited[1])==0){
+						FindCategoryAppRangeInorder(categoryArr[j].root, categoryArr[j].category,commandSplited[3],commandSplited[4],0);
+						break;
+					}
+				}
+			}
+			else if(strcmp(commandSplited[2],"price")==0){
+				for(int j=0; j< noOfCategories;j++){
+					if(strcmp(categoryArr[j].category,commandSplited[1])==0){
+						FindCategoryPriceRangeInorder(categoryArr[j].root, categoryArr[j].category,atof(commandSplited[3]),atof(commandSplited[4]),0);
+						break;
+					}
+				}
+			}
+			cout << "********************END***************************\n";
 		}
 	}
 	
