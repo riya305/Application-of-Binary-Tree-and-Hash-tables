@@ -1,10 +1,10 @@
 Category:   Games	Application:    Candy Crush Soda Saga
-Category:   Games	Application:    FiFA r Ultimate Team
+Category:   Games	Application:    FIFA 16 Ultimate Team
 Category:   Medical	No free applications found
 Category:   Social Networking	No free applications found
 ********************END***************************
 Category:   Games	Application:    Candy Crush Soda Saga
-Category:   Games	Application:    FiFA r Ultimate Team
+Category:   Games	Application:    FIFA 16 Ultimate Team
 Category:   Games	Application:    Game of Life Classic Edition
 Category:   Games	Application:    Minecraft: Pocket Edition
 ********************END***************************
@@ -13,6 +13,5 @@ Category:   Games	Application:    Candy Crush Soda Saga
 No category found 
 ********************END***************************
 Category:   Games	Application:    Candy Crush Soda Saga
-Category:   Games	Application:    FiFA r Ultimate Team
-Category:   Games	Application:    Game of Life Classic Edition
+Category:   Games	Application:    FIFA 16 Ultimate Team
 ********************END***************************

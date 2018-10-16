@@ -45,22 +45,23 @@ void FindCategoryInorder(struct tree* root, string catName){
    
 }
 
-void FindCategoryPriceRangeInorder(struct tree* root, string catName, float startPrice, float endPrice, int flag){
+int FindCategoryPriceRangeInorder(struct tree* root, string catName, float startPrice, float endPrice){
 	if (root != NULL) 
     { 
-    	flag=2;
-        FindCategoryPriceRangeInorder(root->left,catName,startPrice,endPrice,flag);
-        if((root->applicationInfo.price >= startPrice) && (root->applicationInfo.price <= endPrice)){
-        	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
-        	cout << "\n";
-        	flag=1;
+        if(!FindCategoryPriceRangeInorder(root->left,catName,startPrice,endPrice) && ((root->applicationInfo.price <= startPrice) || (root->applicationInfo.price >= endPrice)) && !FindCategoryPriceRangeInorder(root->right,catName,startPrice,endPrice)){
+      	return 0;
     	}
-        FindCategoryPriceRangeInorder(root->right,catName,startPrice,endPrice,flag); 
+    	else{
+    		if((root->applicationInfo.price >= startPrice) && (root->applicationInfo.price <= endPrice)){
+    			cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
+        		cout << "\n";
+    		}
+    		return 1;
+        }
+         
     }
-    else if(flag!=1 && flag!=2 && root==NULL){
-    	cout << "Category:   "+catName+"	"+"No applications found for given range.";
-		cout << "\n";
-    }
+    else
+    	return 1;
    
 }
 
@@ -225,7 +226,11 @@ int main()
 			else if(strcmp(commandSplited[2],"price")==0){
 				for(int j=0; j< noOfCategories;j++){
 					if(strcmp(categoryArr[j].category,commandSplited[1])==0){
-						FindCategoryPriceRangeInorder(categoryArr[j].root, categoryArr[j].category,atof(commandSplited[3]),atof(commandSplited[4]),0);
+						int flg = FindCategoryPriceRangeInorder(categoryArr[j].root, categoryArr[j].category,atof(commandSplited[3]),atof(commandSplited[4]));
+						if(!flg){
+							cout << "No applications found for given range.";
+							cout << "\n";
+						}
 						break;
 					}
 				}
