@@ -34,6 +34,8 @@ struct hash_table_entry{
    struct tree *app_node; // Pointer to node in tree containing the application information
 };
 
+
+/********* Function to find categories in alphabetical order. ******/
 void FindCategoryInorder(struct tree* root, string catName){
 	if (root != NULL) 
     { 
@@ -45,64 +47,59 @@ void FindCategoryInorder(struct tree* root, string catName){
    
 }
 
-int FindCategoryPriceRangeInorder(struct tree* root, string catName, float startPrice, float endPrice){
+
+/********* Function to find application within the given range of prices. If no free application found in the given price range it returns a string saying No free applications found. ******/
+void FindCategoryPriceRangeInorder(struct tree* root, string catName, float startPrice, float endPrice, int* arr){
 	if (root != NULL) 
     { 
-        if(!FindCategoryPriceRangeInorder(root->left,catName,startPrice,endPrice) && ((root->applicationInfo.price <= startPrice) || (root->applicationInfo.price >= endPrice)) && !FindCategoryPriceRangeInorder(root->right,catName,startPrice,endPrice)){
-      	return 0;
+        FindCategoryPriceRangeInorder(root->left,catName,startPrice,endPrice,arr);
+        if((root->applicationInfo.price >= startPrice) && (root->applicationInfo.price <= endPrice)){
+        	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
+        	cout << "\n";
     	}
     	else{
-    		if((root->applicationInfo.price >= startPrice) && (root->applicationInfo.price <= endPrice)){
-    			cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
-        		cout << "\n";
-    		}
-    		return 1;
-        }
-         
+    		arr[0]+=1;
+    	}
+        FindCategoryPriceRangeInorder(root->right,catName,startPrice,endPrice,arr); 
     }
-    else
-    	return 1;
+    
    
 }
-
-void FindCategoryAppRangeInorder(struct tree* root, string catName, char* startAlpha, char* endAlpha, int flag){
+/********* Function to find application within the given range of substring. It uses strcmp funtion and therefore follows dictionary order ******/
+void FindCategoryAppRangeInorder(struct tree* root, string catName, char* startAlpha, char* endAlpha, int* arr){
 	if (root != NULL) 
     { 
-    	flag=2;
-        FindCategoryAppRangeInorder(root->left,catName,startAlpha,endAlpha,flag);
+        FindCategoryAppRangeInorder(root->left,catName,startAlpha,endAlpha,arr);
         if((strcmp(root->applicationInfo.app_name,startAlpha)>=0) && (strcmp(endAlpha,root->applicationInfo.app_name)>=0)){
         	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
         	cout << "\n";
-        	flag=1;
     	}
-        FindCategoryAppRangeInorder(root->right,catName,startAlpha,endAlpha,flag); 
+    	else{
+    		arr[0]+=1;
+		}
+        FindCategoryAppRangeInorder(root->right,catName,startAlpha,endAlpha,arr); 
     }
-    else if(flag!=1 && flag!=2 && root==NULL){
-    	cout << "Category:   "+catName+"	"+"No applications found for given range.";
-		cout << "\n";
-    }
+
    
 }
 
-void FindFreePriceInorder(struct tree* root, string catName, int flag) 
+/********* Function to find application with price=0. If no free application found in the given price range it returns a string saying No free applications found. ******/
+void FindFreePriceInorder(struct tree* root, string catName, int* arr) 
 { 
     if (root != NULL) 
     { 
-    	flag=2;
-        FindFreePriceInorder(root->left,catName, flag); 
+        FindFreePriceInorder(root->left,catName, arr); 
         if((root->applicationInfo.price<=0)){
         	cout << "Category:   "+catName+"	"+"Application:    "+root->applicationInfo.app_name; 
         	cout << "\n";
-        	flag=1;
+        }
+        else{
+        	arr[0]+=1;
         }
         
-        FindFreePriceInorder(root->right,catName,flag); 
+        FindFreePriceInorder(root->right,catName,arr); 
     }
-    else if(flag!=1 && flag!=2 && root==NULL){
-    	cout << "Category:   "+catName+"	"+"No free applications found";
-		cout << "\n";
-    }
-		
+   
 } 
 // A utility function to create a new BST node 
 struct tree *newNode(struct app_info appInfo) 
@@ -127,7 +124,14 @@ struct tree* insert(struct tree* node, struct app_info appInfo)
     /* return the (unchanged) node pointer */
     return node; 
 } 
-
+int findNoOfApplications(struct tree* node){
+	if(node == NULL){
+        return 0;
+    }
+    else{
+        return 1 + findNoOfApplications(node->left) + findNoOfApplications(node->right);
+    }
+}
 int main()
 {
 	int noOfCategories;
@@ -193,8 +197,15 @@ int main()
 		if(strcmp(commandSplited[0],"find")==0){
 			if((strcmp(commandSplited[1],"price")==0) && (strcmp(commandSplited[2],"free")==0)){
 				for(int j=0; j< noOfCategories;j++){
-
-					FindFreePriceInorder(categoryArr[j].root, categoryArr[j].category,0);
+					int* arr=new int[10];
+					arr[0]=0;
+					int count=findNoOfApplications(categoryArr[j].root);
+					FindFreePriceInorder(categoryArr[j].root, categoryArr[j].category,arr);
+					if(arr[0]==count){
+				    	cout << "Category: " << categoryArr[j].category << " No free applications found.";
+						cout << "\n";
+					}
+					delete[] arr;
 				}
 
 			}
@@ -217,22 +228,32 @@ int main()
 		else if(strcmp(commandSplited[0],"range")==0){
 			if(strcmp(commandSplited[2],"app")==0){
 				for(int j=0; j< noOfCategories;j++){
+					int* arr=new int[10];
 					if(strcmp(categoryArr[j].category,commandSplited[1])==0){
-						FindCategoryAppRangeInorder(categoryArr[j].root, categoryArr[j].category,commandSplited[3],commandSplited[4],0);
-						break;
+						arr[0]=0;
+						int count=findNoOfApplications(categoryArr[j].root);
+						FindCategoryAppRangeInorder(categoryArr[j].root, categoryArr[j].category,commandSplited[3],commandSplited[4],arr);
+						if(arr[0]==count){
+					    	cout << "No applications found for given range.";
+							cout << "\n";
+						}
 					}
+					delete[] arr;
 				}
 			}
 			else if(strcmp(commandSplited[2],"price")==0){
 				for(int j=0; j< noOfCategories;j++){
+					int* arr=new int[10];
 					if(strcmp(categoryArr[j].category,commandSplited[1])==0){
-						int flg = FindCategoryPriceRangeInorder(categoryArr[j].root, categoryArr[j].category,atof(commandSplited[3]),atof(commandSplited[4]));
-						if(!flg){
-							cout << "No applications found for given range.";
+						arr[0]=0;
+						int count=findNoOfApplications(categoryArr[j].root);
+						FindCategoryPriceRangeInorder(categoryArr[j].root, categoryArr[j].category,atof(commandSplited[3]),atof(commandSplited[4]),arr);
+						if(arr[0]==count){
+					    	cout << "No applications found for given range.";
 							cout << "\n";
 						}
-						break;
 					}
+					delete[] arr;
 				}
 			}
 			cout << "********************END***************************\n";

@@ -14,13 +14,13 @@ FIFA 16 Ultimate Team
 2.0
 1.25 
 GB
-0.00
+1.00
 Games
 Candy Crush Soda Saga
 1.50.8
 61.3 
 MB
-0.00
+2.00
 Games
 Game of Life Classic Edition
 1.2.21
@@ -30,7 +30,7 @@ MB
 5
 find price free
 find category Games
-range Games app A F
+range Games app M S
 find category Lifestyle
-range Games price 0.00 5.00
+range Games price 27.00 25.00
 
