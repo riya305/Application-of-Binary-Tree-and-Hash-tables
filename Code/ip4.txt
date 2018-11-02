@@ -1,0 +1,102 @@
+2
+Utilities
+Weather
+15
+Utilities
+Swype
+1.6
+31.1
+MB
+0.99
+Utilities
+Crystal
+1.1
+3
+MB
+0.99
+Utilities
+Geekbench 3
+3.4.0
+12.5
+MB
+0.99
+Utilities
+Google
+9.0
+79.7
+MB
+0.00
+Weather
+NOAA Radar Pro
+3.7
+74
+MB
+1.99
+Weather
+Weather Live
+4.6
+79
+MB
+1.99
+Weather
+The Weather Channel
+6.12
+78.5
+MB
+0.00
+Weather
+AccuWeather
+8.5.4
+60.3
+MB
+0.00
+Utilities
+Wake Alarm Clock
+3.2
+76.1
+MB
+0.00
+Utilities
+Chrome
+45.0.2454.89
+71.5
+MB
+0.00
+Utilities
+myAT&T
+4.6
+20.9
+MB
+0.00
+Utilities
+QR Reader for iPhone
+5.3
+3.7
+MB
+0.00
+Utilities
+My Verizon Mobile
+4.6.2
+30.7
+MB
+0.00
+Utilities
+Flashlight
+2.0.1
+16.1
+MB
+0.00
+Utilities
+GIF Keyboard
+2.2
+20.4
+MB
+0.00
+7
+find app GIF Keyboard
+find category Utilities
+find price free
+range Utilities price 0.00 15.00
+range Weather app Ba Ti
+delete Utilities myAT&T
+find category Utilities

@@ -273,21 +273,49 @@ int FindAppInHash(struct hash_table_entry** hashArr,int key, const char* appName
 void removeAppFromHash(int key, const char* appName, struct hash_table_entry** hashArr){
     struct hash_table_entry* entry;
     entry = hashArr[key];
+    int flag=0;
+    struct hash_table_entry* temp;
+
+    if (!entry) {
+        cout << "Application not found; unable to delete." <<endl;
+        return;
+    }
+    temp = entry;
+    while (entry != NULL) {
+            /* delete the node with given application name */
+        if (strcmp(entry->app_name,appName)==0) {
+            flag = 1;
+            if (entry == hashArr[key])
+                hashArr[key] = entry->next;
+            else
+                temp->next = entry->next;
+
+            free(entry);
+            break;
+        }
+        temp = entry;
+        entry = entry->next;
+    }
+    if (flag)
+        cout << "Application deleted " << appName <<endl;
+    else
+        cout << "Application not found; unable to delete." <<endl;
+    return;
     
-    while (entry!= NULL){
-    	if (strcmp(entry->app_name,appName)==0){
-    		delete entry;
-    		cout << "Application deleted " << appName <<endl;
-        	return;
-    	}
-    	else{
-			entry = entry->next;
-   		}
-    }
-    if(entry==NULL){
-    	cout << "Application not found; unable to delete." <<endl;
-    	return;
-    }
+   //  while (entry!= NULL){
+   //  	if (strcmp(entry->app_name,appName)==0){
+   //  		delete entry;
+   //  		cout << "Application deleted " << appName <<endl;
+   //      	return;
+   //  	}
+   //  	else{
+			// entry = entry->next;
+   // 		}
+   //  }
+   //  if(entry==NULL){
+   //  	cout << "Application not found; unable to delete." <<endl;
+   //  	return;
+   //  }
 
 }
 

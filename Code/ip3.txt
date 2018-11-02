@@ -1,0 +1,248 @@
+5
+Reference
+Finance
+Music
+Productivity
+News
+39
+Finance
+HomeBudget with Sync
+3.1.9
+8.2
+MB
+4.99
+Finance
+Dataman Next
+9.0
+724
+KB
+1.99
+Finance
+BillMinder
+3.7.6
+4.3
+MB
+1.99
+Finance
+Tollsmart
+1.6.1
+5.5
+MB
+2.99
+Finance
+Bank of America
+6.4.0
+52.9
+MB
+0.00
+News
+Daily Craigslist Unlimited
+6.1.3.0
+22
+MB
+0.99
+News
+Pocket Casts
+5.0.1
+8.1
+MB
+3.99
+News
+iCatcher! Podcast Player
+2.7
+11.6
+MB
+2.99
+News
+Reeder 2
+2.6
+4.8
+MB
+4.99
+News
+CNN App for iPhone
+4.0.1
+42.7
+MB
+0.00
+Reference
+Sky Guide: View Stars Night or Day
+5.0.1
+102
+MB
+2.99
+Reference
+WolframAlpha
+1.6.2.2015011603
+15.1
+MB
+2.99
+Reference
+iHandy Translator Pro
+1.2.5
+23.5
+MB
+1.99
+Reference
+Google Translate
+4.1.0
+27.6
+MB
+0.00
+Reference
+Follow Boss
+1.0
+23.7
+MB
+0.00
+News
+Fox News
+2.2.1
+62.6
+MB
+0.00
+News
+BuzzFeed
+4.17
+37.9
+MB
+0.00
+Music
+Ultimate Guitar Tabs
+2.3.7
+22.2
+MB
+2.99
+Music
+djay 2 for iPhone
+2.7.10
+54.5
+MB
+2.99
+Music
+Premium Music for Spotify
+1.4
+13.7
+MB
+2.99
+Music
+Hype Machine
+2.4.5
+6.1
+MB
+3.99
+Music
+Ocarina
+1.4.5
+5.5
+MB
+0.99
+Music
+Loopy HD
+1.4.20
+13.9
+MB
+3.99
+Music
+Pandora - Free Music & Radio
+6.4.1
+54
+MB
+0.00
+Music
+Spotify Music
+4.0.0
+85
+MB
+0.00
+Music
+SoundCloud - Music & Audio
+3.13.0
+29.8
+MB
+0.00
+Music
+Shazam - Discover music, artists, videos & lyrics
+9.0.1
+69
+MB
+0.00
+Music
+Sing! Karaoke by Smule
+4.3.5
+92
+MB
+0.00
+News
+Medium
+2.0.2508
+18.6
+MB
+0.00
+News
+Overcast: Podcast Player
+2.0
+4.6
+MB
+0.00
+News
+Police Scanner+ Free
+6.6
+64.3
+MB
+0.00
+Finance
+Chase Mobile
+2.461
+20.9
+MB
+0.00
+Finance
+PayPal
+5.12.2
+44.4
+MB
+0.00
+Productivity
+Yahoo Mail
+3.2.19
+70.6
+MB
+0.00
+Productivity
+Google Drive
+4.2
+77.2
+MB
+0.00
+Productivity
+Google Docs
+1.2015.38205
+77.4
+MB
+0.00
+Productivity
+Microsoft Outlook
+1.4.5
+51.3
+MB
+0.00
+Productivity
+Gmail - email from Google
+4.1
+17.7
+MB
+0.00
+Productivity
+Dropbox
+4.0.3
+61.7
+MB
+0.00
+6
+delete Finance PayPal
+find app PayPal
+delete News Daily Craigslist Unlimited
+find price free
+range Productivity price 0.00 15.00
+find category News

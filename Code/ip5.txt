@@ -23,7 +23,7 @@ Sports
 Travel
 Utilities
 Weather
-217
+117
 Books
 Stride & Prejudice
 1.0.2
@@ -54,24 +54,6 @@ Sherlock: Interative Adventure
 1.06
 GB
 2.99
-Books
-Jubitron the Girl Robot
-2.08
-110
-MB
-1.99
-Books
-Poems by Heart
-2.0
-38.1
-MB
-0.99
-Books
-DC Comics: Batman #1
-3.7.4
-58.6
-MB
-0.99
 Business
 HotSchedules
 4.13.0
@@ -102,42 +84,6 @@ doTERRA
 13.5
 MB
 4.99
-Business
-Indeed Job Search
-3.3
-2.5
-MB
-0.00
-Business
-Adobe Acrobat Reader
-15.1.00
-37.6
-MB
-0.00
-Business
-Square Register
-4.26
-95.4
-MB
-0.00
-Business
-Snagajob
-4.1.0
-86.1
-MB
-0.00
-Business
-iTunes Connect
-3.1
-5.2
-MB
-0.00
-Business
-Facebook Pages Manager
-32.0
-99.8
-MB
-0.00
 Catalogs
 YL Oils & Young Living Oils
 1.2
@@ -168,42 +114,6 @@ Photo Plastic
 73.9
 MB
 0.00
-Catalogs
-Hair Color Dye
-1.3
-23.6
-MB
-0.00
-Catalogs
-Jo-Ann
-3.09
-6.2
-MB
-0.00
-Education
-Sago Mini Babies
-1.0
-62.3
-MB
-2.99
-Education
-Toca Hair Salon 2
-1.1.3
-46
-MB
-2.99
-Education
-Star Walk 2
-2.0.1
-149
-MB
-2.99
-Education
-Toca Kitchen 2
-1.2
-65.7
-MB
-2.99
 Education
 Stack the States
 2.5
@@ -264,54 +174,6 @@ EWallpaper
 9.8
 MB
 2.99
-Entertainment
-Abby Lee Dance Secrets
-1.1
-47
-MB
-4.99
-Entertainment
-ThemeLocks
-1.5
-72.7
-MB
-1.99
-Entertainment
-Netflix
-7.2.0
-29.1
-MB
-0.00
-Entertainment
-Hulu
-4.6.2
-23.1
-MB
-0.00
-Entertainment
-Dubsmash
-1.3.4
-29.7
-MB
-0.00
-Entertainment
-Vine
-4.1.1
-42.3
-MB
-0.00
-Entertainment
-Colorfy
-1.6
-60.7
-MB
-0.00
-Entertainment
-HBO NOW
-1.3.0
-18.4
-MB
-0.00
 Finance
 HomeBudget with Sync
 3.1.9
@@ -342,48 +204,12 @@ Bank of America
 52.9
 MB
 0.00
-Finance
-Chase Mobile
-2.461
-20.9
-MB
-0.00
-Finance
-PayPal
-5.12.2
-44.4
-MB
-0.00
-Food & Drink
-Fit Men Cook
-1.3
-81.8
-MB
-2.99
-Food & Drink
-Forks Over Knives
-1.12
-83.7
-MB
-4.99
-Food & Drink
-Paprika Recipe Manager
-2.1.6
-7.1
-MB
-4.99
-Food & Drink
-MealBoard
-3.2.1
-7.8
-MB
-3.99
 Food & Drink
 Mixologist
 5.0.2
 22
 MB
-099
+0.99
 Food & Drink
 Starbucks
 3.3.1
@@ -406,114 +232,6 @@ Food & Drink
 Domino's Pizza USA
 3.0.0
 46.3
-MB
-0.00
-Food & Drink
-Dunkin' Donuts
-3.7
-40.9
-MB
-0.00
-Food & Drink
-GrubHub
-2.99.5
-59.5
-MB
-0.00
-Food & Drink
-Pizza Hut
-3.1.8
-20.4
-MB
-0.00
-Games
-Minecraft: Pocket Edition
-0.12.1
-24.1 
-MB
-6.99
-Games
-FIFA 16 Ultimate Team
-2.0
-1.25 
-GB
-0.00
-Games
-Candy Crush Soda Saga
-1.50.8
-61.3 
-MB
-0.00
-Games
-Game of Life Classic Edition
-1.2.21
-15.3 
-MB
-0.99
-Games
-Heads Up!
-2.7
-98.2
-MB
-0.99
-Games
-Geometry Dash
-2.01
-56.9
-MB
-1.99
-Games
-Plague Inc.
-1.10.3
-63
-MB
-0.99
-Games
-PewDiePie
-1.0.0
-84.4
-MB
-4.99
-Games
-Scribblenauts Remix
-5.4
-181
-MB
-0.99
-Games
-Balloons TD 5
-2.17.2
-91.6
-MB
-2.99
-Games
-hocus.
-1.1.0
-23.1
-MB
-0.99
-Games
-Smashy Road: Wanted
-1.1.4
-65
-MB
-0.00
-Games
-The Walking Dead: No Man's Land
-1.1.1
-263
-MB
-0.00
-Games
-Sonic Dash 2
-1.0.1
-93.6
-MB
-0.00
-Games
-1010!
-9
-42.8
 MB
 0.00
 Games
@@ -547,36 +265,6 @@ Psych!
 MB
 0.00
 Health & Fitness
-PAUSE
-1.1
-54.4
-MB
-1.99
-Health & Fitness
-7 Minute Workout Challenge
-1.5
-79.4
-MB
-2.99
-Health & Fitness
-Sleep Cycle alarm clock
-4.8.1
-41.6
-MB
-0.99
-Health & Fitness
-Fitness Buddy
-4.1.0
-58.6
-MB
-1.99
-Health & Fitness
-The Wonder Weeks
-4.3.2
-9.5
-MB
-1.99
-Health & Fitness
 Full Fitness
 2.2
 28.8
@@ -606,18 +294,6 @@ Nike+ Running
 77.3
 MB
 0.00
-Kids
-Toca Life: City
-1.1
-90.3
-MB
-2.99
-Kids
-PAW Patrol Rescue Run
-2.3.2
-209
-MB
-3.99
 Kids
 Elmo Calls
 3.4
@@ -678,18 +354,6 @@ Tinder
 26.6
 MB
 0.00
-Lifestyle
-Project Color by The Home Depot
-1.1.34
-16.6
-MB
-0.00
-Lifestyle
-eBay
-4.1.0
-63.8
-MB
-0.00
 Magazines & Newspapers
 The Wall Street Journal
 7.1
@@ -720,24 +384,6 @@ Cosmopolitan Magazine US
 14.8
 MB
 19.99
-Magazines & Newspapers
-Forbes Magazine
-5.13
-31.6
-MB
-29.99
-Medical
-Baby Heartbeats
-1.05
-54.2
-MB
-4.99
-Medical
-IntelliDrink PRO - Blood Alcohol Content Calculator
-2.1
-18
-MB
-2.99
 Medical
 Essential Anatomy 5
 5.0
@@ -768,42 +414,6 @@ MyChart
 22.1
 MB
 0.00
-Music
-Ultimate Guitar Tabs
-2.3.7
-22.2
-MB
-2.99
-Music
-djay 2 for iPhone
-2.7.10
-54.5
-MB
-2.99
-Music
-Premium Music for Spotify
-1.4
-13.7
-MB
-2.99
-Music
-Hype Machine
-2.4.5
-6.1
-MB
-3.99
-Music
-Ocarina
-1.4.5
-5.5
-MB
-0.99
-Music
-Loopy HD
-1.4.20
-13.9
-MB
-3.99
 Music
 Pandora - Free Music & Radio
 6.4.1
@@ -864,48 +474,6 @@ iTrans NYC Subway
 38.4
 MB
 3.99
-Navigation
-Plane Finder
-9.1.0
-25.2
-MB
-3.99
-Navigation
-Google Maps
-4.11.0
-34.2
-MB
-0.00
-Navigation
-MapQuest: Free Navigation, GPC, Maps & Traffic
-4.9
-28.9
-MB
-0.00
-Navigation
-Phone Tracker for iPhones
-3.4.7
-23.1
-MB
-0.00
-Navigation
-Scout GPS Navigation, ETA, Maps & Traffic
-3.2.1
-60.3
-MB
-0.00
-Navigation
-Transit Directions by Moovit
-4.4.1
-42.2
-MB
-0.00
-News
-Daily Craigslist Unlimited
-6.1.3.0
-22
-MB
-0.99
 News
 Pocket Casts
 5.0.1
@@ -934,30 +502,6 @@ News
 Fox News
 2.2.1
 62.6
-MB
-0.00
-News
-BuzzFeed
-4.17
-37.9
-MB
-0.00
-News
-Medium
-2.0.2508
-18.6
-MB
-0.00
-News
-Overcast: Podcast Player
-2.0
-4.6
-MB
-0.00
-News
-Police Scanner+ Free
-6.6
-64.3
 MB
 0.00
 Photo & Video
@@ -990,30 +534,6 @@ Snapchat
 64.4
 MB
 0.00
-Photo & Video
-Instagram
-7.7.2
-22.2
-MB
-0.00
-Photo & Video
-YouTube
-10.38
-40.7
-MB
-0.00
-Productivity
-Purify Blocker
-1.1.1
-12.7
-MB
-0.99
-Productivity
-Fantastical 2 for iPhone
-2.5
-22.3
-MB
-4.99
 Productivity
 Printer Pro
 5.4.4
@@ -1042,30 +562,6 @@ Productivity
 iDownloads PLUS FREE
 1.7.3
 12.2
-MB
-0.00
-Productivity
-Yahoo Mail
-3.2.19
-70.6
-MB
-0.00
-Productivity
-Google Drive
-4.2
-77.2
-MB
-0.00
-Productivity
-Google Docs
-1.2015.38205
-77.4
-MB
-0.00
-Productivity
-Microsoft Outlook
-1.4.5
-51.3
 MB
 0.00
 Reference
@@ -1128,30 +624,6 @@ Facebook
 96.9
 MB
 0.00
-Social Networking
-Pinterest
-5.4.3
-53.5
-MB
-0.00
-Social Networking
-Twitter
-6.38.1
-64.6
-MB
-0.00
-Social Networking
-WhatsApp Messenger
-2.12.7
-52.1
-MB
-0.00
-Sports
-IronMobile - Ironman Athlete Tracker
-3.7
-4.2
-MB
-0.99
 Sports
 College Football Radio & Live Scores!
 1.7
@@ -1180,42 +652,6 @@ Sports
 ESPN
 4.5
 33.5
-MB
-0.00
-Sports
-DailyMVP: Daily Fantasy Sports
-1.6.9
-45.8
-MB
-0.00
-Sports
-FanDuel: One Day Fantasy Sports Leagues
-1.9.1
-35.4
-MB
-0.00
-Sports
-MLB.com At Bat
-8.6.1
-62.1
-MB
-0.00
-Sports
-Univision Deportes
-4.0
-40
-MB
-0.00
-Sports
-BTN2Go
-5.0
-45.8
-MB
-0.00
-Sports
-FOX Sports GO
-2.3.4
-26.7
 MB
 0.00
 Travel
@@ -1266,42 +702,6 @@ Wake Alarm Clock
 76.1
 MB
 0.00
-Utilities
-Chrome
-45.0.2454.89
-71.5
-MB
-0.00
-Utilities
-myAT&T
-4.6
-20.9
-MB
-0.00
-Utilities
-QR Reader for iPhone
-5.3
-3.7
-MB
-0.00
-Utilities
-My Verizon Mobile
-4.6.2
-30.7
-MB
-0.00
-Utilities
-Flashlight
-2.0.1
-16.1
-MB
-0.00
-Utilities
-GIF Keyboard
-2.2
-20.4
-MB
-0.00
 Weather
 NOAA Radar Pro
 3.7
@@ -1326,13 +726,29 @@ AccuWeather
 60.3
 MB
 0.00
-9
-find category Lifestyle
-find category Magazines & Newspapers
-find category Games
-find category Productivity
-find price free
-range News price 4.99 19.99
-range News price 19.99 49.99
-range Reference app Wa Wz
-range Reference app A G
+25
+delete Books Weird But True
+find Category Reference
+find app Ocarina
+range Medical app M X
+find category Catalogs
+delete Productivity Fantastical 2 for iPhone
+range Food & Drink app a z
+range Health & Fitness price 5.00 10.00
+delete Social Networking Badoo Premium
+delete Magazines & Newspapers Shopkins Magazine
+delete Travel City Maps 2Go Pro
+find category Books 
+find app Weird But True
+delete Finance BillMinder
+find category Entertainment
+range Reference app d to
+delete Lifestyle Crazy Unknown
+find app Netflix
+find app Hair Color Dye
+range Books price 0.00 4.99
+delete Sports WatchESPN
+delete Social Networking Facebook 
+delete Photo & Video Superimpose
+delete Utilities Wake Alarm Clock
+find category Food
