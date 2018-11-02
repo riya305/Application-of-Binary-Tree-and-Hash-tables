@@ -387,7 +387,7 @@ int main()
 				}
 
 			}
-			else if(strcmp(commandSplited[1],"category")==0){
+			else if(strcmp(commandSplited[1],"category")==0 || strcmp(commandSplited[1],"Category")==0){
 				int flag=0;
 				int l=0;
 				int m=0;
@@ -399,7 +399,6 @@ int main()
 				}
 
 				const char* application_name=appName.c_str();
-
 				for(int j=0; j< noOfCategories;j++){
 					if(strcmp(categoryArr[j].category,application_name)==0){
 						FindCategoryInorder(categoryArr[j].root, categoryArr[j].category);
@@ -435,10 +434,22 @@ int main()
 
 		}
 		else if(strcmp(commandSplited[0],"range")==0){
-			if(strcmp(commandSplited[2],"app")==0){
 				for(int j=0; j< noOfCategories;j++){
-					int* arr=new int[10];
-					if(strcmp(categoryArr[j].category,commandSplited[1])==0){
+					string myString=categoryArr[j].category;
+				// cout << myString.find(commandSplited[1]);
+				// cout << "\n";
+					if(myString.find(commandSplited[1])==0){
+						int numspaces = 0;
+						char nextChar;
+
+					// checks each character in the string
+					for (int i=0; i<int(myString.length()); i++){
+						nextChar = myString.at(i); // gets a character
+						if (isspace(myString[i]))
+							numspaces++;
+					}
+					if(strcmp(commandSplited[numspaces+2],"app")==0){
+						int* arr=new int[10];
 						arr[0]=0;
 						int count=findNoOfApplications(categoryArr[j].root);
 						FindCategoryAppRangeInorder(categoryArr[j].root, categoryArr[j].category,commandSplited[3],commandSplited[4],arr);
@@ -446,14 +457,10 @@ int main()
 					    	cout << "No applications found for given range.";
 							cout << "\n";
 						}
+						delete[] arr;
 					}
-					delete[] arr;
-				}
-			}
-			else if(strcmp(commandSplited[2],"price")==0){
-				for(int j=0; j< noOfCategories;j++){
-					int* arr=new int[10];
-					if(strcmp(categoryArr[j].category,commandSplited[1])==0){
+					else if(strcmp(commandSplited[numspaces+2],"price")==0){
+						int* arr=new int[10];
 						arr[0]=0;
 						int count=findNoOfApplications(categoryArr[j].root);
 						FindCategoryPriceRangeInorder(categoryArr[j].root, categoryArr[j].category,atof(commandSplited[3]),atof(commandSplited[4]),arr);
@@ -461,11 +468,12 @@ int main()
 					    	cout << "No applications found for given range.";
 							cout << "\n";
 						}
+						delete[] arr;
 					}
-					delete[] arr;
 				}
 			}
 			cout << "********************END***************************\n";
+			
 		}
 		else if(strcmp(commandSplited[0],"delete")==0){
 			for(int j=0; j< noOfCategories;j++){
@@ -504,8 +512,10 @@ int main()
 			}
 			cout << "********************END***************************\n";
 		}
-
+ 
 	}
+	delete[] categoryArr;
+	delete[] hashArr;
 	
 	// printf( "Implement myAppStore here.\n" );
 }
