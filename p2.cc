@@ -5,9 +5,9 @@
 #include <math.h>
 using namespace std;
 
-#define	CAT_NAME_LEN	25
-#define	APP_NAME_LEN	50
-#define	VERSION_LEN	10
+#define	CAT_NAME_LEN	58
+#define	APP_NAME_LEN	40
+#define	VERSION_LEN	17
 #define	UNIT_SIZE	3
 
 struct app_info{
@@ -163,8 +163,9 @@ struct tree* insert(struct tree* node, struct app_info appInfo)
     if (node == NULL) return newNode(appInfo); 
   
     /* Otherwise, recur down the tree */
-    if (strcmp(appInfo.app_name,node->applicationInfo.app_name )<0) 
-        node->left  = insert(node->left, appInfo); 
+    if (strcmp(appInfo.app_name,node->applicationInfo.app_name )<0)
+    	node->left  = insert(node->left, appInfo); 
+    
     else if (strcmp(appInfo.app_name,node->applicationInfo.app_name )>0) 
         node->right = insert(node->right, appInfo);   
   
@@ -226,7 +227,6 @@ struct tree* deleteNode(struct tree* root, const char* appName)
   
         // Copy the inorder successor's content to this node 
         strcpy(root->applicationInfo.app_name,temp->applicationInfo.app_name); 
-  
         // Delete the inorder successor 
         root->right = deleteNode(root->right, temp->applicationInfo.app_name); 
     } 
@@ -277,6 +277,7 @@ void removeAppFromHash(int key, const char* appName, struct hash_table_entry** h
     while (entry!= NULL){
     	if (strcmp(entry->app_name,appName)==0){
     		delete entry;
+    		cout << "Application deleted " << appName <<endl;
         	return;
     	}
     	else{
@@ -293,18 +294,17 @@ void removeAppFromHash(int key, const char* appName, struct hash_table_entry** h
 struct hash_table_entry** insertInHashTable(int key, struct tree* node, char* application, struct hash_table_entry** hashArr){
 	struct hash_table_entry* hashedObj;
     hashedObj = hashArr[key];
-    while (hashedObj != NULL){
-        hashedObj = hashedObj->next;
-    }
+    struct hash_table_entry* currentObj;
     if (hashedObj == NULL){
-
-       hashedObj = newHashNode(key, node, application);
-       hashArr[key]= hashedObj;
+        hashedObj = newHashNode(key, node, application);
+        hashArr[key]= hashedObj;
     }
     else{
-       strcpy(hashedObj->app_name,application);
-       hashedObj->app_node = node;
+       	currentObj = newHashNode(key, node, application);
+        currentObj->next = hashedObj;
+    	hashArr[key]= currentObj;
 	}
+
 	return hashArr;
 }
 
@@ -397,7 +397,9 @@ int main()
 					if((2+l)!=k)
 						appName+=" ";
 				}
+
 				const char* application_name=appName.c_str();
+
 				for(int j=0; j< noOfCategories;j++){
 					if(strcmp(categoryArr[j].category,application_name)==0){
 						FindCategoryInorder(categoryArr[j].root, categoryArr[j].category);
@@ -475,8 +477,7 @@ int main()
 					char nextChar;
 
 					// checks each character in the string
-					for (int i=0; i<int(myString.length()); i++)
-					{
+					for (int i=0; i<int(myString.length()); i++){
 						nextChar = myString.at(i); // gets a character
 						if (isspace(myString[i]))
 							numspaces++;
@@ -494,6 +495,7 @@ int main()
 					for(int i = 0; application_name[i] != '\0'; i++)
 						sum1 = sum1 + application_name[i];
 					int hashIndex1 = sum1%hashSize;
+					
 					removeAppFromHash(hashIndex1,application_name,hashArr);
 					deleteNode(categoryArr[j].root,application_name);
 
